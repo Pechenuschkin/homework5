@@ -28,10 +28,11 @@ if ( clientOS1 == 0 && clientDeviceYear < 2015 ) {
 }
         System.out.println();
         System.out.println( " Задача № 3 " );
-        int year = 1584;
-        int p = year % 400;
-        int o = year % 100;
-        int i = year % 4;
+        int year = 2025;
+        int initialYear = 1584; // Дополнительные вычисления.
+        int p = initialYear % 400;
+        int o = initialYear % 100;
+        int i = initialYear % 4;
         System.out.println( p );
         System.out.println( o );
         System.out.println( i );
