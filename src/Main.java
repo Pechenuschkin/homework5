@@ -37,11 +37,11 @@ public class Main {
         System.out.println(o);
         System.out.println(i);
         if (year >= 1584 && year % 4 == 0 && year % 100 != 84 || year % 400 == 384) {
-            System.out.println(" год является високосным ");
+            System.out.println( year + " год является високосным ");
         } else if (year < 1584) {
             System.out.println(" Високосный год был введён в 1584 году ");
         } else {
-            System.out.println(" год не является високосным ");
+            System.out.println( year + " год не является високосным ");
         }
         System.out.println();
         System.out.println(" Задача № 4 ");
