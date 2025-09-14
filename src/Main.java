@@ -28,30 +28,28 @@ public class Main {
         }
         System.out.println();
         System.out.println(" Задача № 3 ");
-        int year = 2025;
-        int initialYear = 1584; // Дополнительные вычисления.
-        int p = initialYear % 400;
-        int o = initialYear % 100;
-        int i = initialYear % 4;
-        System.out.println(p);
-        System.out.println(o);
-        System.out.println(i);
+        int year = 1584;
+
         if (year >= 1584 && year % 4 == 0 && year % 100 != 84 || year % 400 == 384) {
-            System.out.println( year + " год является високосным ");
+            System.out.println(year + " год является високосным ");
         } else if (year < 1584) {
             System.out.println(" Високосный год был введён в 1584 году ");
         } else {
-            System.out.println( year + " год не является високосным ");
+            System.out.println(year + " год не является високосным ");
         }
         System.out.println();
         System.out.println(" Задача № 4 ");
-        int deliveryDistance = 7;
+        int deliveryDistance = 99;
+        int deliveryDay = 1;
         if (deliveryDistance > 0 && deliveryDistance < 20) {
-            System.out.println(" На доставку потребуются 1 сутки ");
+            deliveryDay = 1;
+            System.out.println(" На доставку потребуются " + deliveryDay + " сутки ");
         } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
-            System.out.println(" На доставку потребуются 2 суток ");
+            deliveryDay += 1;
+            System.out.println(" На доставку потребуются " + deliveryDay + " суток ");
         } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
-            System.out.println(" На доставку потребуются 3 суток ");
+            deliveryDay += 2;
+            System.out.println(" На доставку потребуются " + deliveryDay + " суток ");
         } else {
             System.out.println(" Доставки нет ");
         }
