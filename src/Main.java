@@ -13,24 +13,27 @@ public class Main {
         }
         System.out.println();
         System.out.println(" Задача № 2 ");
-        int clientOS1 = 1;
-        int clientDeviceYear = 2012;
-        if (clientOS1 == 0 && clientDeviceYear < 2015) {
-            System.out.println(" Установите облегченную версию приложения для iOS по ссылке ");
-        } else if (clientOS1 == 0 && clientDeviceYear >= 2015) {
-            System.out.println(" Установите версию приложения для iOS по ссылке ");
-        } else if (clientOS1 == 1 && clientDeviceYear < 2015) {
-            System.out.println(" Установите облегченную версию приложения для Android по ссылке ");
-        } else if (clientOS1 == 1 && clientDeviceYear >= 2015) {
-            System.out.println(" Установите версию приложения для Android по ссылке ");
+        var clientOS1 = 1;
+        int clientDeviceYear = 2005;
+        String operationSystem = " operationSystem ";
+        if (clientOS1 == 0) {
+            operationSystem = "iOS";
+        } else if (clientOS1 == 1) {
+            operationSystem = "Android";
         } else {
             System.out.println(" Такой операционной системы нет ");
+            return;
+        }
+        if (clientDeviceYear < 2015) {
+            System.out.println(" Установите облегченную версию приложения для " + operationSystem + " по ссылке ");
+        } else if (clientDeviceYear >= 2015) {
+            System.out.println(" Установите версию приложения для " + operationSystem + " по ссылке ");
         }
         System.out.println();
         System.out.println(" Задача № 3 ");
         int year = 1584;
 
-        if (year >= 1584 && year % 4 == 0 && year % 100 != 84 || year % 400 == 384) {
+        if ((year >= 1584 && year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
             System.out.println(year + " год является високосным ");
         } else if (year < 1584) {
             System.out.println(" Високосный год был введён в 1584 году ");
@@ -44,10 +47,10 @@ public class Main {
         if (deliveryDistance > 0 && deliveryDistance < 20) {
             deliveryDay = 1;
             System.out.println(" На доставку потребуются " + deliveryDay + " сутки ");
-        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance < 60) {
             deliveryDay += 1;
             System.out.println(" На доставку потребуются " + deliveryDay + " суток ");
-        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+        } else if (deliveryDistance <= 100) {
             deliveryDay += 2;
             System.out.println(" На доставку потребуются " + deliveryDay + " суток ");
         } else {
